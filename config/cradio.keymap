@@ -43,7 +43,7 @@
            &mt LSHIFT A &kp S      &kp D      &kp F     &kp G          &kp H      &kp J        &kp K     &kp L    &mt RSHIFT SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            HRML( Z,       X,         C,         V)     &kp B         &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            HRML( Z,       X,         C,         V)     &kp B         &kp N      HRMR(M,    COMMA,     DOT,       FSLH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &lt 3 BSPC     &kp SPACE  &lt 1 ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -89,11 +89,11 @@
             display-name = "Sym Layer";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│  ESC     │  [       │  {       │  }       │          │   │  @       │  (       │  )       │  ]       │  ~       │
+            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp AT   &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  {       │  [       │  (       │  %       │   │  #       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp LBRC     &kp HASH   &kp LPAR   &kp PRCNT      &kp HASH  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+            &kp EXCL   &kp LBRC   &kp LBKT    &kp LPAR   &kp PRCNT      &kp HASH  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  }       │  ]       │  )       │          │   │  $       │  _       │  +       │  │       │          │
             &trans     &kp RBRC  &kp RBKT    &kp RPAR    &trans        &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans

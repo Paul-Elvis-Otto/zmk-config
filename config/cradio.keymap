@@ -26,7 +26,7 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 
@@ -45,7 +45,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             HRML( Z,       X,         C,         V)     &kp B         &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp BSPC     &kp SPACE  &lt 1 ENTER
+                                            &lt 2 TAB   &lt 3 BSPC     &kp SPACE  &lt 1 ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -54,8 +54,8 @@
             display-name = "Right Layer";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│ ESC      │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp ESC    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
             &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
@@ -84,6 +84,24 @@
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
+        };
+        sym_layer {
+            display-name = "Sym Layer";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  ESC     │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
+            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  !       │  {       │  [       │  (       │  %       │   │  #       │  -       │  =       │  \       │  `       │
+            &kp EXCL   &kp LBRC     &kp HASH   &kp LPAR   &kp PRCNT      &kp HASH  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │  }       │  ]       │  )       │          │   │  $       │  _       │  +       │  │       │          │
+            &trans     &kp RBRC  &kp RBKT    &kp RPAR    &trans        &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //
+            >;
+
         };
 
         tri_layer {

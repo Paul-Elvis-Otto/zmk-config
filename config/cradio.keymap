@@ -107,8 +107,8 @@
             display-name = "Nav Layer";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-           &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
+        //│ESC       │          │          │          │          │   │          │          │          │          │          │
+           &kp ESC      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    left  │ down     │ up       │ right    │          │
           &trans      &trans     &trans     &trans      &trans        &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &trans

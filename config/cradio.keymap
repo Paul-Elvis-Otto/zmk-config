@@ -26,7 +26,7 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <4>;
+            then-layer = <5>;
         };
     };
 
@@ -45,7 +45,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             HRML( Z,       X,         C,         V)     &kp B         &kp N      HRMR(M,    COMMA,     DOT,       FSLH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &lt 3 BSPC     &kp SPACE  &lt 1 ENTER
+                                            &lt 2 TAB   &lt 3 BSPC     &lt 4 SPACE  &lt 1 ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -103,7 +103,23 @@
             >;
 
         };
-
+        nav_layer {
+            display-name = "Nav Layer";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │    left  │ down     │ up       │ right    │          │
+          &trans      &trans     &trans     &trans      &trans           &LEFT     &DOWN     &UP        &RIGHT     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans    &trans      &trans          &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
         tri_layer {
             display-name = "Tri Layer";
             bindings = <

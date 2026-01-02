@@ -90,7 +90,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESC     │  [       │  {       │  }       │          │   │  @       │  "       │  '       │  ]       │  ~       │
-            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp AT   &kp SQT     &kp APOS   &kp RBKT   &kp TILDE
+            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp AT   &kp DQT     &kp SQT   &kp RBKT   &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  {       │  [       │  (       │  %       │   │  #       │  -       │  =       │  \       │  `       │
             &kp EXCL   &kp LBRC   &kp LBKT    &kp LPAR   &kp PRCNT      &kp HASH  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE

@@ -89,8 +89,8 @@
             display-name = "Sym Layer";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  [       │  {       │  }       │          │   │  @       │  (       │  )       │  ]       │  ~       │
-            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp AT   &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│  ESC     │  [       │  {       │  }       │          │   │  @       │  "       │  '       │  ]       │  ~       │
+            &kp ESC     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp AT   &kp SQT     &kp APOS   &kp RBKT   &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  {       │  [       │  (       │  %       │   │  #       │  -       │  =       │  \       │  `       │
             &kp EXCL   &kp LBRC   &kp LBKT    &kp LPAR   &kp PRCNT      &kp HASH  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE

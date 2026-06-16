@@ -11,7 +11,7 @@ DARK_SVG := "./draw/sweep_keymap_dark.svg"
 LIGHT_PNG := "./draw/keymap_light.png"
 DARK_PNG := "./draw/keymap_dark.png"
 
-PNG_WIDTH := "3840"
+PNG_WIDTH := "5120"
 
 COMMIT_MESSAGE := "Update keymap renders"
 
@@ -50,6 +50,9 @@ draw: check
         git commit -m "{{ COMMIT_MESSAGE }}"; \
     fi
 
+    @echo "{{ CYAN }}reloading hammerspoon's init.lua{{ NORMAL }}"
+    hs -c "hs.reload()"
+
 clean:
     rm -f {{ LIGHT_SVG }} {{ DARK_SVG }} {{ LIGHT_PNG }} {{ DARK_PNG }}
 
@@ -57,7 +60,9 @@ check:
     @command -v keymap >/dev/null || { echo "ERROR: keymap command not found"; exit 1; }
     @command -v rsvg-convert >/dev/null || { echo "ERROR: rsvg-convert not found. Install with: brew install librsvg"; exit 1; }
     @command -v git >/dev/null || { echo "ERROR: git command not found"; exit 1; }
+    @command -v gh >/dev/null || { echo "ERROR: gh not found. Install with: brew install gh"; exit 1; }
     @git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { echo "ERROR: not inside a Git repository"; exit 1; }
+    @gh auth status >/dev/null 2>&1 || { echo "ERROR: GitHub CLI is not authenticated. Run: gh auth login"; exit 1; }
 
 firmware:
     mkdir -p {{ FIRMWARE_DIR }}

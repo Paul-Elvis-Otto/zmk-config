@@ -1,0 +1,21 @@
+# Downloaded GitHub Actions firmware artifacts
+firmware/
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

@@ -1,0 +1,212 @@
+layout: {zmk_keyboard: cradio}
+layers:
+  Default Layer:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LSHIFT}
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, h: RSHIFT}
+  - {t: Z, h: LSHFT}
+  - {t: X, h: LALT}
+  - {t: C, h: LCTRL}
+  - {t: V, h: LGUI}
+  - B
+  - N
+  - {t: M, h: RGUI}
+  - {t: ',', h: RCTRL}
+  - {t: ., h: RALT}
+  - {t: /, h: RSHFT}
+  - {t: TAB, h: Left Layer}
+  - {t: BSPC, h: Sym Layer}
+  - {t: SPACE, h: Nav Layer}
+  - {t: ENTER, h: Right Layer}
+  Right Layer:
+  - ESC
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - ':'
+  - DEL
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - RSHIFT
+  - '&caps_word'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESC
+  - {t: ▽, type: trans}
+  - {type: held}
+  Left Layer:
+  - ESC
+  - '['
+  - '{'
+  - '}'
+  - {t: ▽, type: trans}
+  - ^
+  - (
+  - )
+  - ']'
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '*'
+  - '-'
+  - '='
+  - \
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&'
+  - _
+  - +
+  - '|'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Sym Layer:
+  - ESC
+  - '['
+  - '{'
+  - '}'
+  - {t: ▽, type: trans}
+  - '@'
+  - '"'
+  - ''''
+  - ']'
+  - '~'
+  - '!'
+  - '{'
+  - '['
+  - (
+  - '%'
+  - '#'
+  - '-'
+  - '='
+  - \
+  - '`'
+  - {t: ▽, type: trans}
+  - '}'
+  - ']'
+  - )
+  - {t: ▽, type: trans}
+  - '&'
+  - _
+  - +
+  - '|'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Nav Layer:
+  - ESC
+  - {t: ▽, type: trans}
+  - BRI UP
+  - NEXT
+  - VOL UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BRI DN
+  - PP
+  - VOL DN
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PREV
+  - MUTE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Tri Layer:
+  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&sys_reset'
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '1'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR
+  - {t: BT, h: '2'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}

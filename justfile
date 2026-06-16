@@ -15,6 +15,10 @@ PNG_WIDTH := "3840"
 
 COMMIT_MESSAGE := "Update keymap renders"
 
+FIRMWARE_DIR := "./firmware"
+FIRMWARE_ARTIFACT := "firmware"
+WORKFLOW_NAME := "Build ZMK firmware"
+
 default:
     @just --list
 
@@ -54,3 +58,20 @@ check:
     @command -v rsvg-convert >/dev/null || { echo "ERROR: rsvg-convert not found. Install with: brew install librsvg"; exit 1; }
     @command -v git >/dev/null || { echo "ERROR: git command not found"; exit 1; }
     @git rev-parse --is-inside-work-tree >/dev/null 2>&1 || { echo "ERROR: not inside a Git repository"; exit 1; }
+
+firmware:
+    mkdir -p {{ FIRMWARE_DIR }}
+    rm -rf {{ FIRMWARE_DIR }}/*
+
+    run_id="$( gh run list --workflow "{{ WORKFLOW_NAME }}" --branch "$(git branch --show-current)" --status success --limit 1 --json databaseId --jq '.[0].databaseId')"
+
+    if [[ -z "$run_id" || "$run_id" == "null" ]]; then \
+        echo "ERROR: no successful firmware build found for current branch"; \
+        exit 1; \
+    fi
+
+    gh run download "$run_id" \
+        --name {{ FIRMWARE_ARTIFACT }} \
+        --dir {{ FIRMWARE_DIR }}
+
+    echo "Downloaded newest firmware into {{ FIRMWARE_DIR }}"

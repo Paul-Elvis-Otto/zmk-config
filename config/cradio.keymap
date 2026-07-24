@@ -28,6 +28,10 @@
             if-layers = <1 2>;
             then-layer = <5>;
         };
+        sys_layer {
+            if-layers = <3 4>;
+            then-layer = <6>;
+        };
     };
 
     keymap {
@@ -91,18 +95,18 @@
         sym_layer {
             display-name = "Sym Layer";
             bindings = <
-//    ┌─────┬───┬───┬─────┬─────┐   ┌─────┬─────┬───┬───┬─────┐
-//    │ Esc │ [ │ { │  }  │     │   │  @  │  "  │ ' │ ] │  ~  │
-//    ├─────┼───┼───┼─────┼─────┤   ├─────┼─────┼───┼───┼─────┤
-//    │  !  │ { │ [ │  (  │  %  │   │  #  │  -  │ = │ \ │  `  │
-//    ├─────┼───┼───┼─────┼─────┤   ├─────┼─────┼───┼───┼─────┤
-//    │     │ } │ ] │  )  │     │   │  &  │  _  │ + │ | │     │
-//    └─────┴───┴───┼─────┼─────┤   ├─────┼─────┼───┴───┴─────┘
-//                  │     │     │   │     │     │
-//                  └─────┴─────┘   └─────┴─────┘
-  &kp ESC    &kp LBKT   &kp LBRC   &kp RBRC   &trans          &kp AT     &kp DQT     &kp SQT     &kp RBKT   &kp TILDE
-  &kp EXCL   &kp LBRC   &kp LBKT   &kp LPAR   &kp PRCNT       &kp HASH   &kp MINUS   &kp EQUAL   &kp BSLH   &kp GRAVE
-  &trans     &kp RBRC   &kp RBKT   &kp RPAR   &trans          &kp AMPS   &kp UNDER   &kp PLUS    &kp PIPE   &trans
+//    ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬───┬───┬───┐
+//    │ Esc │  [  │  {  │  (  │  +  │   │  @  │  =  │ ' │ ] │ ~ │
+//    ├─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼───┼───┼───┤
+//    │  !  │  {  │  [  │  )  │  %  │   │  #  │  -  │ " │ \ │ ` │
+//    ├─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼───┼───┼───┤
+//    │     │     │     │     │     │   │  &  │  _  │ + │ | │ \ │
+//    └─────┴─────┴─────┼─────┼─────┤   ├─────┼─────┼───┴───┴───┘
+//                      │     │     │   │     │     │
+//                      └─────┴─────┘   └─────┴─────┘
+  &kp ESC    &kp LBKT   &kp LBRC   &kp LPAR   &kp PLUS        &kp AT     &kp EQUAL   &kp SQT    &kp RBKT   &kp TILDE
+  &kp EXCL   &kp LBRC   &kp LBKT   &kp RPAR   &kp PRCNT       &kp HASH   &kp MINUS   &kp DQT    &kp BSLH   &kp GRAVE
+  &trans     &trans     &trans     &trans     &trans          &kp AMPS   &kp UNDER   &kp PLUS   &kp PIPE   &kp BSLH
                                    &trans     &trans          &trans     &trans
             >;
 
@@ -141,6 +145,24 @@
   &bootloader   &trans   &trans   &trans       &bt BT_SEL 1       &trans   &trans   &trans   &trans   &bootloader
   &trans        &trans   &trans   &bt BT_CLR   &bt BT_SEL 2       &trans   &trans   &trans   &trans   &trans
                                   &trans       &trans             &trans   &trans
+            >;
+        };
+      sys_layer {
+            display-name = "Sys Layer";
+            bindings = <
+//    ┌─────┬─────┬──────┬──────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┐
+//    │ Esc │     │      │ mute │     │   │      │      │     │      │     │
+//    ├─────┼─────┼──────┼──────┼─────┤   ├──────┼──────┼─────┼──────┼─────┤
+//    │     │     │ bri+ │ volu │     │   │ left │ down │ up  │ rght │     │
+//    ├─────┼─────┼──────┼──────┼─────┤   ├──────┼──────┼─────┼──────┼─────┤
+//    │     │     │ bri- │ vold │     │   │      │      │     │      │     │
+//    └─────┴─────┴──────┼──────┼─────┤   ├──────┼──────┼─────┴──────┴─────┘
+//                       │      │     │   │      │      │
+//                       └──────┴─────┘   └──────┴──────┘
+  &kp ESC   &trans   &trans         &kp C_MUTE     &trans       &trans     &trans     &trans   &trans      &trans
+  &trans    &trans   &kp C_BRI_UP   &kp C_VOL_UP   &trans       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &trans
+  &trans    &trans   &kp C_BRI_DN   &kp C_VOL_DN   &trans       &trans     &trans     &trans   &trans      &trans
+                                    &trans         &trans       &trans     &trans
             >;
         };
     };

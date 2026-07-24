@@ -150,18 +150,18 @@
       sys_layer {
             display-name = "Sys Layer";
             bindings = <
-//    ┌─────┬─────┬──────┬──────┬─────┐   ┌───────────────┬──────┬─────┬──────┬─────┐
-//    │ Esc │     │      │ mute │     │   │ lctl(lgui(⏎)) │      │     │      │     │
-//    ├─────┼─────┼──────┼──────┼─────┤   ├───────────────┼──────┼─────┼──────┼─────┤
-//    │     │     │ bri+ │ volu │     │   │     left      │ down │ up  │ rght │     │
-//    ├─────┼─────┼──────┼──────┼─────┤   ├───────────────┼──────┼─────┼──────┼─────┤
-//    │     │     │ bri- │ vold │     │   │               │      │     │      │     │
-//    └─────┴─────┴──────┼──────┼─────┤   ├───────────────┼──────┼─────┴──────┴─────┘
-//                       │      │     │   │               │      │
-//                       └──────┴─────┘   └───────────────┴──────┘
-  &kp ESC   &trans   &trans         &kp C_MUTE     &trans       &kp LC(LG(ENTER))   &trans     &trans   &trans      &trans
-  &trans    &trans   &kp C_BRI_UP   &kp C_VOL_UP   &trans       &kp LEFT            &kp DOWN   &kp UP   &kp RIGHT   &trans
-  &trans    &trans   &kp C_BRI_DN   &kp C_VOL_DN   &trans       &trans              &trans     &trans   &trans      &trans
+//    ┌─────┬─────┬──────┬──────┬─────┐   ┌───────────────┬─────┬─────┬─────┬─────┐
+//    │ Esc │     │      │ mute │     │   │ lctl(lgui(⏎)) │     │     │     │     │
+//    ├─────┼─────┼──────┼──────┼─────┤   ├───────────────┼─────┼─────┼─────┼─────┤
+//    │     │     │ bri+ │ volu │     │   │     next      │     │     │     │     │
+//    ├─────┼─────┼──────┼──────┼─────┤   ├───────────────┼─────┼─────┼─────┼─────┤
+//    │     │     │ bri- │ vold │     │   │     play      │     │     │     │     │
+//    └─────┴─────┴──────┼──────┼─────┤   ├───────────────┼─────┼─────┴─────┴─────┘
+//                       │      │     │   │               │     │
+//                       └──────┴─────┘   └───────────────┴─────┘
+  &kp ESC   &trans   &trans         &kp C_MUTE     &trans       &kp LC(LG(ENTER))   &trans   &trans   &trans   &trans
+  &trans    &trans   &kp C_BRI_UP   &kp C_VOL_UP   &trans       &kp C_NEXT          &trans   &trans   &trans   &trans
+  &trans    &trans   &kp C_BRI_DN   &kp C_VOL_DN   &trans       &kp C_PP            &trans   &trans   &trans   &trans
                                     &trans         &trans       &trans              &trans
             >;
         };
